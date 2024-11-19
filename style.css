@@ -11,19 +11,19 @@ body{
 
 
 /* Background color on header linear gradient blue */
-.section-header{
+.second-section .section-header{
     width: 100%;
     height: 100px;
     background: linear-gradient(to bottom, rgb(4 193 168), rgb(145 239 226));
 }
 
 /* Displaying flex on div to create left and right column */
-.row{
+.second-section .row{
     display: flex;
 }
 
 /* Left column */
-.left{
+.second-section .row .left{
     width: 50%;
     border-right: 1px solid grey;
     padding: 0 35px 20px 85px;
@@ -33,7 +33,7 @@ body{
 }
 
 /* Image area(div) defined */
-.left .swimming-pool-image{
+.second-section .left .swimming-pool-image{
     position: relative;
     height: 500px;
     top: -50px;
@@ -44,21 +44,21 @@ body{
 }
 
 /*  font of CEO's Message in left part */
-.left h1{
+.second-section .left h1{
     letter-spacing: 1px;
     font-size: 40px;
 }
 
 
 /* font setting of -Rahul agaskar in left section */
-.left h3{
+.second-section .left h3{
     letter-spacing: 1px;
     font-weight: 100;
     line-height: 25px;
 }
 
 /* font setting of left and right paragraphs */
-.left p, .right p{
+.second-section .left p, .second-section .right p{
     margin: 30px 0;
     letter-spacing: 0.5px;
     line-height: 20px;
@@ -67,23 +67,23 @@ body{
 
 
 /* Color of Link in paragraph is made black */
-.left p a{
+.second-section .left p a{
     color: black;
 }
 
-.left p strong{
+.second-section .left p strong{
     font-size: 22px;
     letter-spacing: 1.2px;
 }
 
-.left div strong a{
+.second-section .left div strong a{
     color: black;
     font-size: 18px;
 }
 
 
 /* Setting of right section */
-.right{
+.second-section .right{
     width: 50%;
     padding-bottom: 20px;
     display: flex;
@@ -93,7 +93,7 @@ body{
 
 
 
-.right .magazine-photo{
+.second-section .right .magazine-photo{
     width: 85%;
     height: fit-content;
     position: relative;
@@ -101,19 +101,19 @@ body{
     padding-left: 40px;
 }
 
-.magazine-photo img{
+.second-section .magazine-photo img{
     width: 100%;
     height: 325px;
     object-fit: cover;
 }
 
-.right .magazine-photo span{
+.second-section .right .magazine-photo span{
     display: block;
     text-align: center;
     margin: 5px 0;
 }
 
-.right .highlights{
+.second-section .right .highlights{
     overflow: hidden;
     position: relative;
     /* top: -50px; */
@@ -121,7 +121,7 @@ body{
 
 
 /* Image area of key-highlights image */
-.right .highlights .key-highlights-photo{
+.second-section .right .highlights .key-highlights-photo{
     margin: 0 20px;
     width: 90%;
     height: 300px;
@@ -131,7 +131,7 @@ body{
 }
 
 /* Zooming image to set the required image area */
-.key-highlights-photo img{
+.second-section .key-highlights-photo img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -139,18 +139,18 @@ body{
     object-position: 40px 75%;
 }
 
-.right .key-highlights{
+.second-section .right .key-highlights{
     padding: 0px 15px 0 35px;
 }
 
-.right .key-highlights h3{
+.second-section .right .key-highlights h3{
     margin: 15px 0;
     font-size: 26px;
     letter-spacing: 0.5px;
     font-weight: 100;
 }
 
-.right .key-highlights ul li{
+.second-section .right .key-highlights ul li{
     margin: 15px  0;
     font-size: 18px;
     letter-spacing: 0.5px;
@@ -162,28 +162,28 @@ ul li:nth-last-child(1){
 
 
 @media (max-width: 768px){
-    .row{
+    .second-section .row{
         flex-direction: column;
     }
 
-    .row .left, .row .right{
+    .second-section .row .left, .second-section .row .right{
         border: none;
         width: 100%;
         padding: 10px 20px;
     }
 
-    .right .magazine-photo{
+    .second-section .right .magazine-photo{
         top: 0;
         width: 100%;
         padding-left: 0;
     }
 
-    .right .key-highlights-photo{
+    .second-section .right .key-highlights-photo{
         margin: 0 !important;
         width: 100% !important;
     }
 
-    .right .key-highlights{
+    .second-section .right .key-highlights{
         padding: 0px 0px 0 18px;
     }
 }
