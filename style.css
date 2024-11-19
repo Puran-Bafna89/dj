@@ -10,6 +10,140 @@ body{
 }
 
 
+/* Page-specific styling */
+.newsletter-page {
+    color: #333;
+    padding: 20px 20px 0 20px;
+}
+
+/* Top header image */
+.newsletter-page .header-img {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.newsletter-page .header-img img {
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Content section with overlap and two columns */
+.newsletter-page .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -50px; /* Slight overlap with the top image */
+    z-index: 2;
+    position: relative;
+    background-color: #e0f4ff;
+    padding: 20px;
+    /*border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);*/
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Centered Titles */
+.newsletter-page .content h1 {
+    margin: 0px 0px 15px 0px;
+    text-align: center;
+}
+
+.newsletter-page .content h3 {
+    margin: 5px 0;
+    text-align: center;
+    font-weight: normal !important;
+    font-size: 18px !important;
+
+}
+/* Two-column layout */
+.newsletter-page .content-body {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Left column with fixed height image */
+.newsletter-page .content-body .left {
+    /*flex: 1;
+    position: relative;
+    padding: 35px;*/
+
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+     padding: 35px;
+}
+
+.newsletter-page .content-body .left img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    /* border-radius: 8px; */
+}
+
+/* Secondary title for left column */
+.newsletter-page .content-body .left .secondary-title {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Right column for text content */
+.newsletter-page .content-body .right {
+    flex: 2;
+    text-align: left;
+}
+
+/* Headings and paragraph styling */
+.newsletter-page h2 {
+    font-size: 1.3em;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.newsletter-page .content-body p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Link styling */
+.newsletter-page a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.newsletter-page a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .newsletter-page .content-body {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
 /* Background color on header linear gradient blue */
 .second-section .section-header{
     width: 100%;
@@ -18,7 +152,7 @@ body{
 }
 
 /* Displaying flex on div to create left and right column */
-.second-section .row{
+.second-section .row, .third-section .row{
     display: flex;
 }
 
@@ -187,3 +321,106 @@ ul li:nth-last-child(1){
         padding: 0px 0px 0 18px;
     }
 }
+
+
+.third-section .conference-part{
+    text-align: center;
+    padding-top: 25px;
+    /* background-color: rgb(252, 241, 243); */
+}
+
+
+.third-section .conference-part h2{
+    font-size: 30px;
+    letter-spacing: 1.5px;
+}
+
+
+.third-section .conference-part span{
+    line-height: 40px;
+    letter-spacing: 0.7px;
+}
+
+.third-section .banner{
+    width: 80%;
+    margin: 0 auto;
+    height: 300px;
+}
+
+.third-section .banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* scale: 1; */
+}
+
+.third-section .row .left{
+    /* flex-basis: 50%; */
+    width: 50%;
+}
+
+.third-section .row .right{
+    width: 50%;
+}
+
+.third-section .row .left .msg, .third-section .row .right .msg{
+    margin: 20px 0 5px 0;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.third-section .row .left .gallery, .third-section .row .right .gallery{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.third-section .row .left .gallery img, .third-section .row .right .gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.third-section .row .left .text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.third-section .row .left .text span{
+    font-size: 40px;
+    padding: 0 80px;
+    opacity: 0.7;
+    /* color: grey; */
+}
+
+.third-section .row .left .msgEnd, .third-section .row .right .msgEnd{
+    margin: 5px 0;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px){
+
+    .third-section .conference-part h2{
+        font-size: 22px;
+    }
+
+    .third-section .conference-part span{
+        display: inline-block;
+        padding-top: 10px;
+        line-height: normal;
+        font-size: 18px;
+    }
+
+    .third-section .row{
+        flex-direction: column;
+    }
+
+    .third-section .row .left, .third-section .row .right{
+        width: 100%;
+    }
+}
+
